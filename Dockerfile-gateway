@@ -1,7 +1,7 @@
 FROM java:openjdk-8-alpine
 
-COPY spring-cloud-eureka-zone-affinity/gateway/target/*.jar /root
+COPY spring-cloud-eureka-zone-affinity/gateway/ /root
 WORKDIR /root
 EXPOSE 8080
 
-CMD java -jar *.jar --spring.profiles.active=zone1
+CMD java -jar target/*.jar --spring.profiles.active=zone1
